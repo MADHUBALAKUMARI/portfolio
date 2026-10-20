@@ -1,0 +1,28 @@
+kind = "web"
+previewPath = "/"
+title = "Madhubala Kumari — Developer Portfolio"
+description = "A responsive portfolio for full-stack developer Madhubala Kumari, featuring her BCA background, core technical skills, selected projects, resume, and contact information."
+version = "1.0.0"
+id = "artifacts/madhubala-portfolio"
+router = "path"
+
+[[services]]
+name = "web"
+paths = [ "/" ]
+localPort = 24688
+
+[services.development]
+run = "pnpm --filter @workspace/madhubala-portfolio run dev"
+
+[services.production]
+build = [ "pnpm", "--filter", "@workspace/madhubala-portfolio", "run", "build" ]
+serve = "static"
+publicDir = "artifacts/madhubala-portfolio/dist/public"
+
+[[services.production.rewrites]]
+from = "/*"
+to = "/index.html"
+
+[services.env]
+PORT = "24688"
+BASE_PATH = "/"
