@@ -1,0 +1,1 @@
+- [Next.js preview WebSockets](next-preview-websocket.md) — allow the preview origin, route HMR explicitly, and avoid redirecting its endpoint.

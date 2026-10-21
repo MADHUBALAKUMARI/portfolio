@@ -8,7 +8,7 @@ router = "path"
 
 [[services]]
 name = "web"
-paths = [ "/" ]
+paths = [ "/", "/_next/hmr" ]
 localPort = 24688
 
 [services.development]
@@ -17,7 +17,7 @@ run = "pnpm --filter @workspace/madhubala-portfolio run dev"
 [services.production]
 build = [ "pnpm", "--filter", "@workspace/madhubala-portfolio", "run", "build" ]
 serve = "static"
-publicDir = "artifacts/madhubala-portfolio/dist/public"
+publicDir = "artifacts/madhubala-portfolio/out"
 
 [[services.production.rewrites]]
 from = "/*"

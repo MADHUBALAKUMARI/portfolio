@@ -1,6 +1,6 @@
 # Madhubala Kumari — Portfolio
 
-A responsive, single-page developer portfolio built with the existing React/Vite scaffold. Its visual direction is **nocturnal editorial / luminous systems**: a dark plum canvas, restrained violet-to-blue accents, Space Grotesk display type, Manrope body copy, and DM Mono technical details. The composition uses an editorial hero, orbiting code motif, and numbered project sections.
+A responsive, single-page developer portfolio built with React and the Next.js App Router. Its visual direction is **nocturnal editorial / luminous systems**: a dark plum canvas, restrained violet-to-blue accents, Space Grotesk display type, Manrope body copy, and DM Mono technical details. The composition uses an editorial hero, orbiting code motif, and numbered project sections.
 
 ## Edit portfolio content
 
@@ -18,8 +18,12 @@ Keep the `id` values for projects URL-safe and unique. No institution, graduatio
 From the workspace root:
 
 ```sh
-pnpm --filter @workspace/madhubala-portfolio run dev
+PORT=3000 pnpm --filter @workspace/madhubala-portfolio run dev
 ```
 
-The scaffold also provides `pnpm --filter @workspace/madhubala-portfolio run build`
-and `pnpm --filter @workspace/madhubala-portfolio run typecheck`.
+The site now uses the Next.js App Router. `src/app/page.tsx` loads the portfolio,
+`src/app/layout.tsx` sets page metadata and global styles, and `next.config.ts`
+exports the static site. Build it with
+`pnpm --filter @workspace/madhubala-portfolio run build`; the static output is
+written to `out/`. Run the TypeScript check with
+`pnpm --filter @workspace/madhubala-portfolio run typecheck`.

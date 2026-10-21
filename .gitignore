@@ -7,6 +7,8 @@ out-tsc
 *.tsbuildinfo
 .expo
 .expo-shared
+/artifacts/madhubala-portfolio/.next/
+/artifacts/madhubala-portfolio/out/
 
 # dependencies
 node_modules
