@@ -8,9 +8,9 @@ export const portfolio = {
   aboutHeadline:
     'Curious by nature. Focused on building <em>things that work.</em>',
   about:
-    'BCA graduate (CGPA 8.48, completed July 2026) with hands-on experience in Python, JavaScript, React, REST APIs, FastAPI and PostgreSQL. Seeking a Software Engineer / Fullstack Developer role.',
+    'BCA graduate (CGPA 8.48, completed April 2026) with hands-on experience in Python, JavaScript, React, REST APIs, FastAPI and PostgreSQL. Seeking a Software Engineer / Fullstack Developer role.',
   degree: 'Bachelor of Computer Applications (BCA)',
-  degreeNote: 'CGPA: 8.48 · Completed July 2026',
+  degreeNote: 'CGPA: 8.48 · Completed April 2026',
   skills: [
     {
       title: 'Languages',
@@ -77,9 +77,9 @@ export const portfolio = {
   ],
   experience: [
     {
-      id: 'bright-infotech',
-      role: 'Python Backend Developer Intern',
-      company: 'Bright Infotech',
+      id: 'bright-infonet',
+      role: 'Python Backend Developer Intern (7 Months)',
+      company: 'Bright Infonet',
       description:
         'Built REST APIs and CRUD operations with Python, database integration, API testing and debugging.',
     },
