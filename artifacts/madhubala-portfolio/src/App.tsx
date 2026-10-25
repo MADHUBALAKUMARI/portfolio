@@ -190,11 +190,7 @@ function App() {
                     <a className="project-link" href={project.url} target="_blank" rel="noreferrer" aria-label={`Open ${project.title}`} data-testid={`link-project-${project.id}`}>
                       <ArrowUpRight size={16} />
                     </a>
-                  ) : (
-                    <span className="project-link disabled" aria-label="Project link not provided" title="Project link not provided">
-                      <ArrowUpRight size={16} />
-                    </span>
-                  )}
+                  ) : null}
                 </article>
               ))}
             </div>
@@ -233,31 +229,19 @@ function App() {
             <div className="contact-title">
               <p className="section-kicker">05 / Open to good conversations</p>
               <h2 id="contact-title" data-testid="heading-contact">Have a problem worth solving?</h2>
-              <p>I would love to hear about it. Add a contact link in the portfolio settings and this is where we can connect.</p>
+              <p>I would love to hear about it. Reach out and let&apos;s connect.</p>
             </div>
             <div className="contact-card" data-testid="content-contact">
               <div className="contact-card-label">Find me here</div>
-              {portfolio.contact.email ? (
-                <a className="contact-option is-link" href={`mailto:${portfolio.contact.email}`} data-testid="link-contact-email">
-                  <span>Email</span><span>{portfolio.contact.email} <ArrowUpRight size={13} /></span>
-                </a>
-              ) : (
-                <div className="contact-option is-disabled" data-testid="status-contact-email"><span>Email</span><span>Not provided</span></div>
-              )}
-              {portfolio.contact.linkedin ? (
-                <a className="contact-option is-link" href={portfolio.contact.linkedin} target="_blank" rel="noreferrer" data-testid="link-contact-linkedin">
-                  <span><Linkedin size={14} /> LinkedIn</span><span>Visit profile <ArrowUpRight size={13} /></span>
-                </a>
-              ) : (
-                <div className="contact-option is-disabled" data-testid="status-contact-linkedin"><span><Linkedin size={14} /> LinkedIn</span><span>Not provided</span></div>
-              )}
-              {portfolio.contact.github ? (
-                <a className="contact-option is-link" href={portfolio.contact.github} target="_blank" rel="noreferrer" data-testid="link-contact-github">
-                  <span><Github size={14} /> GitHub</span><span>Visit profile <ArrowUpRight size={13} /></span>
-                </a>
-              ) : (
-                <div className="contact-option is-disabled" data-testid="status-contact-github"><span><Github size={14} /> GitHub</span><span>Not provided</span></div>
-              )}
+              <a className="contact-option is-link" href={`mailto:${portfolio.contact.email}`} data-testid="link-contact-email">
+                <span>Email</span><span>{portfolio.contact.email} <ArrowUpRight size={13} /></span>
+              </a>
+              <a className="contact-option is-link" href={portfolio.contact.linkedin} target="_blank" rel="noopener noreferrer" data-testid="link-contact-linkedin">
+                <span><Linkedin size={14} /> LinkedIn</span><span>{portfolio.contact.linkedin} <ArrowUpRight size={13} /></span>
+              </a>
+              <a className="contact-option is-link" href={portfolio.contact.github} target="_blank" rel="noopener noreferrer" data-testid="link-contact-github">
+                <span><Github size={14} /> GitHub</span><span>{portfolio.contact.github} <ArrowUpRight size={13} /></span>
+              </a>
             </div>
           </div>
         </section>

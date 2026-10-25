@@ -138,7 +138,6 @@ h2 { margin:0;font:600 clamp(2.4rem,5vw,4rem)/1.05 var(--app-font-display);lette
 .project-tags span { color:#b3a7d4;background:rgba(150,123,216,.09);padding:6px 9px;border-radius:6px;font:10px var(--app-font-mono); }
 .project-link { min-width:36px;height:36px;border:1px solid rgba(192,182,218,.18);border-radius:50%;display:grid;place-items:center;color:#bbb2d5;transition:color .2s,border-color .2s; }
 .project-link:hover { color:#fff;border-color:#a994e8; }
-.project-link.disabled { opacity:.35;cursor:default; }
 .resume-panel { position:relative;overflow:hidden;border:1px solid rgba(177,157,239,.22);border-radius:23px;padding:42px 45px;background:linear-gradient(112deg,rgba(89,66,150,.18),rgba(32,47,78,.17) 60%,rgba(32,28,46,.65));display:flex;align-items:center;justify-content:space-between;gap:32px; }
 .resume-panel::after { content:'CV';position:absolute;right:22%;top:-50px;font:700 220px/.9 var(--app-font-display);letter-spacing:-.1em;color:rgba(181,160,245,.04);pointer-events:none; }
 .resume-copy { position:relative;z-index:1; }
@@ -152,7 +151,8 @@ h2 { margin:0;font:600 clamp(2.4rem,5vw,4rem)/1.05 var(--app-font-display);lette
 .contact-card { padding:25px;border:1px solid rgba(181,168,217,.15);border-radius:18px;background:rgba(29,27,42,.66); }
 .contact-card-label { color:#827d92;font:10px var(--app-font-mono);letter-spacing:.1em;text-transform:uppercase;margin-bottom:19px; }
 .contact-option { display:flex;align-items:center;justify-content:space-between;gap:14px;padding:15px 0;border-top:1px solid rgba(184,174,214,.1);color:#d7d1e5;font-size:13px; }
-.contact-option span:last-child { color:#817b91;font-size:11px; }
+.contact-option > span:first-child { flex-shrink:0; }
+.contact-option > span:last-child { min-width:0;color:#817b91;font-size:11px;text-align:right;overflow-wrap:anywhere;word-break:break-word; }
 .contact-option.is-link:hover { color:#c6b2ff; }
 .contact-option.is-disabled { color:#898497; }
 .footer { border-top:1px solid rgba(193,181,255,.1);padding:24px 0 30px;color:#777286;font:10px var(--app-font-mono); }

@@ -68,8 +68,8 @@ export const portfolio = {
   ],
   resumeUrl: '/resume.pdf',
   contact: {
-    email: '',
-    linkedin: '',
-    github: '',
+    email: 'kumarimadhubala822@gmail.com',
+    linkedin: 'https://www.linkedin.com/in/madhubala-kumari-386815319',
+    github: 'https://github.com/MADHUBALAKUMARI',
   },
 } as const;
