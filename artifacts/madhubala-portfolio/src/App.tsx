@@ -212,14 +212,14 @@ function App() {
             <div className="resume-panel" data-testid="content-resume">
               <div className="resume-copy">
                 <h3>Resume</h3>
-                <p>Want a closer look at my experience and education? My resume will be available here once I add the file.</p>
+                <p>Want a closer look at my experience and education? Download my resume here.</p>
                 <div className="resume-status" data-testid="status-resume">
                   {portfolio.resumeUrl ? 'Resume available' : 'Resume file not added yet'}
                 </div>
               </div>
               {portfolio.resumeUrl ? (
-                <a className="button-primary" href={portfolio.resumeUrl} target="_blank" rel="noreferrer" data-testid="link-resume-download">
-                  View resume <Download size={15} />
+                <a className="button-primary" href={portfolio.resumeUrl} download="Madhubala-Kumari-Resume.pdf" data-testid="link-resume-download">
+                  Download resume <Download size={15} />
                 </a>
               ) : (
                 <span className="button-quiet" aria-disabled="true" data-testid="status-resume-unavailable">Not available yet</span>

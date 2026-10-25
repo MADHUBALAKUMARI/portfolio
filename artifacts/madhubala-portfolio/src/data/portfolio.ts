@@ -66,7 +66,7 @@ export const portfolio = {
       url: '',
     },
   ],
-  resumeUrl: '',
+  resumeUrl: '/resume.pdf',
   contact: {
     email: '',
     linkedin: '',
