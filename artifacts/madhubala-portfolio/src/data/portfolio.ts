@@ -8,68 +8,100 @@ export const portfolio = {
   aboutHeadline:
     'Curious by nature. Focused on building <em>things that work.</em>',
   about:
-    'I am a BCA graduate developing my craft across the full stack. My work leans toward useful tools, clear API design, and thoughtful data handling. I value steady learning, readable code, and products that solve a real need.',
+    'BCA graduate (CGPA 8.48, completed July 2026) with hands-on experience in Python, JavaScript, React, REST APIs, FastAPI and PostgreSQL. Seeking a Software Engineer / Fullstack Developer role.',
   degree: 'Bachelor of Computer Applications (BCA)',
-  degreeNote: 'Undergraduate degree',
+  degreeNote: 'CGPA: 8.48 · Completed July 2026',
   skills: [
     {
-      title: 'Backend',
-      icon: 'braces',
-      skills: ['Python', 'FastAPI', 'REST APIs'],
+      title: 'Languages',
+      icon: 'terminal',
+      skills: ['Python', 'JavaScript', 'SQL'],
       featured: true,
     },
     {
-      title: 'Data',
-      icon: 'database',
-      skills: ['SQL', 'Relational data', 'API integration'],
+      title: 'Backend',
+      icon: 'braces',
+      skills: ['FastAPI', 'REST APIs'],
       featured: false,
     },
     {
       title: 'Frontend',
       icon: 'panels',
-      skills: ['HTML', 'CSS', 'JavaScript', 'Responsive UI'],
+      skills: ['React', 'JavaScript', 'HTML5', 'CSS3'],
       featured: false,
     },
     {
-      title: 'Workflow',
+      title: 'Databases',
+      icon: 'database',
+      skills: ['PostgreSQL', 'MySQL'],
+      featured: false,
+    },
+    {
+      title: 'Tools',
       icon: 'terminal',
-      skills: ['Git', 'Problem solving', 'Iterative development'],
+      skills: ['Git', 'GitHub', 'VS Code', 'Swagger'],
       featured: false,
     },
   ],
   projects: [
     {
-      id: 'careerpilot-ai',
-      number: '01',
-      title: 'CareerPilot AI',
-      description:
-        'A career guidance concept designed to help people move from broad ambitions to a clearer next step. A focused interface puts personalized direction and useful actions at the center.',
-      technologies: ['Python', 'AI', 'Career guidance'],
-      url: '',
-    },
-    {
-      id: 'rag-document-assistant',
-      number: '02',
-      title: 'RAG Document Assistant',
-      description:
-        'A document question-and-answer assistant that makes long-form information easier to explore. Retrieval-augmented responses keep the experience grounded in the material provided.',
-      technologies: ['Python', 'RAG', 'Document search'],
-      url: '',
-    },
-    {
       id: 'student-wellbeing',
-      number: '03',
+      number: '01',
       title: 'Student Wellbeing & Grooming Checker',
       description:
-        'A student-focused checker concept bringing wellbeing and personal presentation prompts together in one approachable experience, with guidance designed to feel practical rather than judgmental.',
-      technologies: ['Python', 'Student wellbeing', 'Web app'],
-      url: '',
+        "AI-based app that analyzes students' emotional wellbeing and grooming compliance from uploaded images, with a React frontend connected to a FastAPI backend.",
+      technologies: ['FastAPI', 'React', 'JavaScript'],
+      githubUrl: '',
+      liveDemoUrl: '',
     },
+    {
+      id: 'rag-system',
+      number: '02',
+      title: 'RAG (Retrieval-Augmented Generation) System',
+      description:
+        'Document processing, text chunking, and a retrieval and answer-generation workflow.',
+      technologies: ['Python', 'RAG'],
+      githubUrl: '',
+      liveDemoUrl: '',
+    },
+    {
+      id: 'subject-management-api',
+      number: '03',
+      title: 'Subject Management API',
+      description:
+        'REST API with full CRUD operations, tested with Swagger.',
+      technologies: ['Python', 'FastAPI', 'PostgreSQL'],
+      githubUrl: '',
+      liveDemoUrl: '',
+    },
+  ],
+  experience: [
+    {
+      id: 'bright-infotech',
+      role: 'Python Backend Developer Intern',
+      company: 'Bright Infotech',
+      description:
+        'Built REST APIs and CRUD operations with Python, database integration, API testing and debugging.',
+    },
+    {
+      id: 'thinknext-technologies',
+      role: 'AI/ML Intern (6 weeks)',
+      company: 'THINKNEXT Technologies',
+      description:
+        'Data processing and manipulation with Pandas and NumPy, basic AI/ML concepts.',
+    },
+  ],
+  certifications: [
+    'Blackbird Software Engineering Job Simulation, Forage (Oct 2026)',
+    'AI/ML Using Python, THINKNEXT Technologies',
+    'ADCA, I-MAS Computer Education',
   ],
   resumeUrl: '/resume.pdf',
   contact: {
     email: 'kumarimadhubala822@gmail.com',
     linkedin: 'https://www.linkedin.com/in/madhubala-kumari-386815319',
+    linkedinLabel: 'linkedin.com/in/madhubala-kumari-386815319',
     github: 'https://github.com/MADHUBALAKUMARI',
+    githubLabel: 'github.com/MADHUBALAKUMARI',
   },
 } as const;

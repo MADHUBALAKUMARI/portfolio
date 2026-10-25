@@ -1,1 +1,2 @@
 - [Next.js preview WebSockets](next-preview-websocket.md) — allow the preview origin, route HMR explicitly, and avoid redirecting its endpoint.
+- [Portfolio content accuracy](portfolio-content-accuracy.md) — use resume or user-supplied facts only; do not invent missing portfolio details.

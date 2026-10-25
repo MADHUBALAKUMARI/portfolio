@@ -22,6 +22,7 @@ const navigation = [
   { label: 'About', href: '#about' },
   { label: 'Skills', href: '#skills' },
   { label: 'Projects', href: '#projects' },
+  { label: 'Experience', href: '#experience' },
   { label: 'Resume', href: '#resume' },
 ];
 
@@ -186,11 +187,45 @@ function App() {
                       {project.technologies.map((technology) => <span key={technology}>{technology}</span>)}
                     </div>
                   </div>
-                  {project.url ? (
-                    <a className="project-link" href={project.url} target="_blank" rel="noreferrer" aria-label={`Open ${project.title}`} data-testid={`link-project-${project.id}`}>
-                      <ArrowUpRight size={16} />
-                    </a>
-                  ) : null}
+                  <div className="project-actions" aria-label={`Links for ${project.title}`}>
+                    {project.githubUrl ? (
+                      <a className="project-action" href={project.githubUrl} target="_blank" rel="noopener noreferrer" data-testid={`link-project-github-${project.id}`}>
+                        <Github size={13} /> GitHub <ArrowUpRight size={12} />
+                      </a>
+                    ) : null}
+                    {project.liveDemoUrl ? (
+                      <a className="project-action" href={project.liveDemoUrl} target="_blank" rel="noopener noreferrer" data-testid={`link-project-demo-${project.id}`}>
+                        Live Demo <ArrowUpRight size={12} />
+                      </a>
+                    ) : null}
+                    {!project.githubUrl && !project.liveDemoUrl ? (
+                      <span className="project-coming-soon">Coming soon</span>
+                    ) : null}
+                  </div>
+                </article>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        <section className="section section-divider" id="experience" aria-labelledby="experience-title">
+          <div className="site-shell">
+            <div className="section-heading">
+              <div>
+                <p className="section-kicker">04 / Experience</p>
+                <h2 id="experience-title" data-testid="heading-experience">Experience.</h2>
+              </div>
+              <p className="heading-aside">Internship experience listed on my resume.</p>
+            </div>
+            <div className="experience-list" data-testid="list-experience">
+              {portfolio.experience.map((item, index) => (
+                <article className="experience-card" key={item.id} data-testid={`card-experience-${item.id}`}>
+                  <span className="experience-number">{String(index + 1).padStart(2, '0')}</span>
+                  <div>
+                    <h3 className="experience-role">{item.role}</h3>
+                    <p className="experience-company">{item.company}</p>
+                    <p className="experience-description">{item.description}</p>
+                  </div>
                 </article>
               ))}
             </div>
@@ -201,7 +236,7 @@ function App() {
           <div className="site-shell">
             <div className="section-heading">
               <div>
-                <p className="section-kicker">04 / The details</p>
+                <p className="section-kicker">05 / The details</p>
                 <h2 id="resume-title" data-testid="heading-resume">A little more on paper.</h2>
               </div>
             </div>
@@ -221,13 +256,24 @@ function App() {
                 <span className="button-quiet" aria-disabled="true" data-testid="status-resume-unavailable">Not available yet</span>
               )}
             </div>
+            <div className="certification-block" data-testid="content-certifications">
+              <div className="certification-heading">
+                <p className="section-kicker">Credentials</p>
+                <h3>Certifications</h3>
+              </div>
+              <ul className="certification-list">
+                {portfolio.certifications.map((certification) => (
+                  <li className="certification-item" key={certification}>{certification}</li>
+                ))}
+              </ul>
+            </div>
           </div>
         </section>
 
         <section className="section section-divider" id="contact" aria-labelledby="contact-title">
           <div className="site-shell contact-layout">
             <div className="contact-title">
-              <p className="section-kicker">05 / Open to good conversations</p>
+              <p className="section-kicker">06 / Open to good conversations</p>
               <h2 id="contact-title" data-testid="heading-contact">Have a problem worth solving?</h2>
               <p>I would love to hear about it. Reach out and let&apos;s connect.</p>
             </div>
@@ -237,10 +283,10 @@ function App() {
                 <span>Email</span><span>{portfolio.contact.email} <ArrowUpRight size={13} /></span>
               </a>
               <a className="contact-option is-link" href={portfolio.contact.linkedin} target="_blank" rel="noopener noreferrer" data-testid="link-contact-linkedin">
-                <span><Linkedin size={14} /> LinkedIn</span><span>{portfolio.contact.linkedin} <ArrowUpRight size={13} /></span>
+                <span><Linkedin size={14} /> LinkedIn</span><span>{portfolio.contact.linkedinLabel} <ArrowUpRight size={13} /></span>
               </a>
               <a className="contact-option is-link" href={portfolio.contact.github} target="_blank" rel="noopener noreferrer" data-testid="link-contact-github">
-                <span><Github size={14} /> GitHub</span><span>{portfolio.contact.github} <ArrowUpRight size={13} /></span>
+                <span><Github size={14} /> GitHub</span><span>{portfolio.contact.githubLabel} <ArrowUpRight size={13} /></span>
               </a>
             </div>
           </div>
