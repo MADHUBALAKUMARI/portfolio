@@ -1,4 +1,5 @@
-'use client';
+
+ 'use client';
 
 import { useState } from 'react';
 import {
@@ -90,6 +91,9 @@ function App() {
               </a>
               <a className="button-quiet" href="#contact" data-testid="link-hero-contact">
                 Get in touch <ArrowRight size={15} />
+              </a>
+              <a className="button-quiet" href={portfolio.contact.github} target="_blank" rel="noopener noreferrer" aria-label="Visit my GitHub profile" data-testid="link-hero-github">
+                <Github size={15} /> GitHub
               </a>
             </div>
             <p className="hero-note"><span>Currently</span> building, learning, and getting better at the details.</p>
@@ -197,9 +201,6 @@ function App() {
                       <a className="project-action" href={project.liveDemoUrl} target="_blank" rel="noopener noreferrer" data-testid={`link-project-demo-${project.id}`}>
                         Live Demo <ArrowUpRight size={12} />
                       </a>
-                    ) : null}
-                    {!project.githubUrl && !project.liveDemoUrl ? (
-                      <span className="project-coming-soon">Coming soon</span>
                     ) : null}
                   </div>
                 </article>
